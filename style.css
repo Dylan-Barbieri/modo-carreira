@@ -2,7 +2,7 @@
     --primary-bg-color: #1a1a2e;
     --card-bg-color: #16213e;
     --primary-text-color: #e94560;
-    --secondary-text-color: #dcdcdc;
+    --secondary-text-color: #e94560;
     --highlight-color: #e94560;
     --font-family: 'Roboto', sans-serif;
 }
@@ -17,6 +17,20 @@ body {
     font-family: var(--font-family);
     background-color: var(--primary-bg-color);
     color: var(--secondary-text-color);
+
+    background-image: url('img/fundo/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.5rem;
 }
 
 
@@ -73,4 +87,10 @@ body {
 
 .btn-primary:hover {
     background-color: #ff6b81;
+}
+
+#team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

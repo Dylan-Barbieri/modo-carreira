@@ -3,70 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Técnico</title>
+    <title>Pontuação do Campeonato</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
-    <div class="container py-5 text-center">
-        <h1 class="mb-4">Página de Detalhes do Técnico</h1>
-        <p>Esta é uma página para o técnico selecionado.</p>
-        <div id="team-info" class="mb-4">
-            <button id="team-name-button" class="btn btn-primary mb-3"></button>
-            <img id="team-image" src="" alt="Team Logo" class="img-fluid mb-3" style="max-width: 200px;">
-            <p id="team-description"></p>
-        </div>
-        <button class="btn btn-primary" onclick="window.history.back()">Voltar</button>
-    </div>
+    <div class="container py-5 text-center"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const teamData = {
-                "Lille OSC": {
-                    image: "img/times/Lille OSC.png",
-                    description: "O Lille OSC, conhecido como Les Dogues, é um clube tradicional do futebol francês e tetracampeão da Ligue 1, com o título mais recente conquistado em 2021."
-                },
-                "Al Nassr": {
-                    image: "img/times/al nassr.png",
-                    description: "O Al-Nassr é um dos maiores clubes da Arábia Saudita, nove vezes campeão nacional, que ganhou visibilidade global após a contratação de Cristiano Ronaldo."
-                },
-                "Corinthians": {
-                    image: "",
-                    description: "Sport Club Corinthians Paulista é um clube poliesportivo brasileiro da cidade de São Paulo."
-                },
-                "São Paulo": {
-                    image: "",
-                    description: "São Paulo Futebol Clube é um clube poliesportivo brasileiro da cidade de São Paulo."
-                }
-            };
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const teamName = urlParams.get('team');
-            const teamInfoDiv = document.getElementById('team-info');
-            const teamNameButton = document.getElementById('team-name-button');
-            const teamImageElement = document.getElementById('team-image');
-            const teamDescriptionElement = document.getElementById('team-description');
-
-            const teamUrls = {
-                "Lille OSC": "https://sofifa.com/team/65/lille-osc/",
-                "Al Nassr": "https://sofifa.com/team/112139/al-nassr/",
-                "Corinthians": "https://www.google.com/search?q=Corinthians",
-                "São Paulo": "https://www.google.com/search?q=São+Paulo+Futebol+Clube"
-            };
-
-            if (teamName && teamData[teamName]) {
-                const team = teamData[teamName];
-                teamNameButton.textContent = `Time: ${teamName}`;
-                teamImageElement.src = team.image;
-                teamDescriptionElement.textContent = team.description;
-                teamInfoDiv.style.display = 'block';
-
-                teamNameButton.onclick = function() {
-                    window.open(teamUrls[teamName], '_blank');
-                };
-            } else {
-                teamInfoDiv.style.display = 'none';
-            }
         });
     </script>
+</body>
+</html>

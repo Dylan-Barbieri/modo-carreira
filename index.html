@@ -10,49 +10,90 @@
 </head>
 <body class="min-vh-100">
     <div class="container py-5 text-center">
-        <h1 class="mb-4">Escolha seu Técnico</h1>
+        <h1 class="mb-4">Escolha o Dono dos Times</h1>
+        
+        <button id="toggle-table-button" class="btn btn-primary mb-4">Mostrar Tabela de Pontos</button>
+
+        <div id="championship-table" class="d-none"> 
+            <div class="card p-4 mx-auto" style="max-width: 800px;">
+                <p class="lead fs-4 text-white mb-4">Pontuação atual dos times:</p>
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Time</th>
+                                <th scope="col">Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="championship-table-body">
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3 text-muted">
+                    Estes são dados de exemplo. Em uma aplicação real, seriam carregados dinamicamente.
+                </p>
+            </div>
+        </div>
+
+
         <div class="row justify-content-center">
             
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="img/tecnicos/rodrigo.jpeg" alt="Rodrigo" class="card-img-top img-fluid">
+                    <img src="img/donos/rodrigo.jpeg" alt="Rodrigo" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h2 class="card-title">Rodrigo Barbieri</h2>
-                        <p class="card-text">Brasileiro</p>
-                        <button class="btn btn-primary" data-team="Lille OSC">Selecionar</button>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Selecionar Time
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" data-team="Arsenal" data-url="https://sofifa.com/team/1/arsenal/260012/">Arsenal</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Milan" data-url="https://sofifa.com/team/47/ac-milan/">Milan</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Marseille" data-url="https://sofifa.com/team/219/olympique-de-marseille/250044/">Marseille</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Sporting" data-url="https://sofifa.com/team/237/sporting-cp/260012/">Sporting</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="img/tecnicos/dylan.jpeg" alt="Dylan" class="card-img-top img-fluid">
+                    <img src="img/donos/dylan.jpeg" alt="Dylan" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h2 class="card-title">Dylan Barbieri</h2>
-                        <p class="card-text">Brasileiro</p>
-                        <button class="btn btn-primary" data-team="Al Nassr">Selecionar</button>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Selecionar Time
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#" data-team="Liverpool" data-url="https://sofifa.com/team/9?hl=pt-BR">Liverpool</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Bayern" data-url="https://sofifa.com/team/21/fc-bayern-munchen/260012/">Bayern</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Atlético" data-url="https://sofifa.com/team/240/atletico-madrid/">Atlético</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Napoli" data-url="https://sofifa.com/team/48/napoli/260012/">Napoli</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="img/tecnicos/brayan.jpeg" alt="Brayan" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h2 class="card-title">Brayan Souza</h2>
-                        <p class="card-text">Brasileiro</p>
-                        <button class="btn btn-primary" data-team="Corinthians">Selecionar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="img/tecnicos/eduardo.jpeg" alt="Eduardo" class="card-img-top img-fluid">
+                    <img src="img/donos/eduardo.jpeg" alt="Eduardo" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h2 class="card-title">Eduardo Blasques</h2>
-                        <p class="card-text">Brasileiro</p>
-                        <button class="btn btn-primary" data-team="São Paulo">Selecionar</button>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                                Selecionar Time
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                <li><a class="dropdown-item" href="#" data-team="Team E1" data-url="#">Team E1</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Team E2" data-url="#">Team E2</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Team E3" data-url="#">Team E3</a></li>
+                                <li><a class="dropdown-item" href="#" data-team="Team E4" data-url="#">Team E4</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,12 +103,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const selectButtons = document.querySelectorAll('.card .btn-primary');
-            selectButtons.forEach(button => {
-                button.addEventListener('click', function() {
+            const selectLinks = document.querySelectorAll('.dropdown-item');
+            selectLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
                     const team = this.dataset.team;
-                    window.location.href = `details.html?team=${team}`;
+                    const url = this.dataset.url;
+
+                    if (url && url !== '#') {
+                        window.location.href = url;
+                    } else {
+                        window.location.href = `details.html?team=${team}`;
+                    }
                 });
+            });
+
+            const teamPoints = [
+                { team: "Arsenal", points: 65 },
+                { team: "Milan", points: 60 },
+                { team: "Marseille", points: 58 },
+                { team: "Sporting", points: 55 },
+                { team: "Liverpool", points: 70 },
+                { team: "Bayern", points: 68 },
+                { team: "Atlético", points: 50 },
+                { team: "Napoli", points: 45 }
+            ];
+
+            const tableBody = document.getElementById('championship-table-body');
+            teamPoints.forEach(data => {
+                const row = tableBody.insertRow();
+                const teamCell = row.insertCell();
+                const pointsCell = row.insertCell();
+                teamCell.textContent = data.team;
+                pointsCell.textContent = data.points;
+            });
+
+            const toggleTableButton = document.getElementById('toggle-table-button');
+            const championshipTable = document.getElementById('championship-table');
+
+            toggleTableButton.addEventListener('click', function() {
+                if (championshipTable.classList.contains('d-none')) {
+                    championshipTable.classList.remove('d-none');
+                    championshipTable.classList.add('d-block');
+                    toggleTableButton.textContent = 'Esconder Tabela de Pontos';
+                } else {
+                    championshipTable.classList.remove('d-block');
+                    championshipTable.classList.add('d-none');
+                    toggleTableButton.textContent = 'Mostrar Tabela de Pontos';
+                }
             });
         });
     </script>
